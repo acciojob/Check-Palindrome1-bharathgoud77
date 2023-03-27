@@ -5,6 +5,14 @@ function palindrome(str){
 	let end = str.length-1;
 	while( start < end)
 		{
+			if(start === ' ')
+			{
+				start++;
+			}
+			if(end === ' ')
+			{
+				end--;
+			}
 			if (start !== end)
 			{
 				return false;
