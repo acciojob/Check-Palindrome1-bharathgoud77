@@ -1,17 +1,13 @@
-// complete the given function
+const palindromeChecker = (str) => {
+  let temp = "";
+  str = str.toLowerCase();
+  for (let i = 0; i < str.length; i++) {
+    temp += str[i];
+  }
+  for (let i = 0; i < temp.length / 2; i++) {
+    if (temp[i] != temp[temp.length - 1 - i]) return false;
+  }
+  return true;
+};
 
-function palindrome(str){
-    let start = 0;
-	let end = str.length-1;
-	while( start < end)
-		{
-			if (start !== end)
-			{
-				return false;
-			}
-			start ++;
-			end --;
-		}
-	return true;
-}
-module.exports = palindrome
+module.exports = palindromeChecker;
